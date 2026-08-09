@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Kiara!</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: pop 1s ease forwards;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #ff4081;
+            margin: 0;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 24px;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff80ab;
+            }
+
+            to {
+                text-shadow: 0 0 25px #ff4081, 0 0 50px #ff80ab;
+            }
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 60px;
+            height: 80px;
+            background: #ff4081;
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 40px;
+            background: #555;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-600px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(-10deg);
+            }
+        }
+
+        .balloon:nth-child(2) {
+            left: 20%;
+            background: #ffeb3b;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 40%;
+            background: #4caf50;
+            animation-delay: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 60%;
+            background: #2196f3;
+            animation-delay: 6s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 80%;
+            background: #9c27b0;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🎉 Happy Birthday, Kiara! 🎂</h1>
+        <p>Wishing you endless joy, love, and laughter today and always 💖</p>
+    </div>
+
+    <!-- Balloons -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+
+</html>
